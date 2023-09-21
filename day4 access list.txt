@@ -1,0 +1,134 @@
+example 1: block the 3 classmates:
+!@edge:
+config t
+no access-list 1 !destroy lock
+access-list 1 deny 10.22.0.0 0.0.255.255
+access-list 1 deny 10.32.0.0 0.0.255.255
+access-list 1 deny 10.42.0.0 0.0.255.255
+access-list 1 perm any
+int gi 0/0/1 
+ip access-group 1 in !lock
+do sh ip access-list 1
+
+config t
+int gi 0/0/1
+no ip access-group 1 in !unlock
+do sh ip access-list 1
+
+new friends
+!@edge:
+config t
+no access-list 2 
+access-list 2 deny 10.21.0.0 0.0.255.255
+access-list 2 deny 10.32.0.0 0.0.255.255
+access-list 2 deny 10.42.0.0 0.0.255.255
+access-list 2 perm any
+int gi 0/0/1 
+ip access-group 2 in
+do sh ip access-list 2
+
+!unlock
+int gi 0/0/1 
+no ip access-group 2 in
+do sh ip access-list 2
+
+
+!@edge:
+config t
+no access-list 3 
+access-list 3 deny 10.21.0.0 0.0.255.255
+access-list 3 deny 10.32.0.0 0.0.255.255
+access-list 3 deny 10.42.0.0 0.0.255.255
+access-list 3 deny 10.22.0.0 0.0.255.255
+access-list 3 perm any
+int gi 0/0/1 
+ip access-group 3 in
+do sh ip access-list 3
+
+option3:
+config t
+no access-list 4
+access-list 4 Permit 10.12.0.0 0.0.255.255
+!access-list 4 deny ANY
+
+int gi 0/0/1
+no ip access-group 4 in
+do sh ip access-list 4
+
+config t
+no access-list 5
+access-list 5 Permit 10.22.0.0 0.0.255.255
+config t
+int gi 0/0/1
+ip access-group 5 in
+do sh ip access-list 5
+
+
+config t
+int fa 0/0
+ ip add 10.11.100.9 255.255.255.0 Secondary
+service finger
+service tcp-small-servers
+service udp-small-servers
+ip dns server
+ip http server
+ip http secure-server
+!Make Ping EASY
+ip host pc 10.11.1.10
+ip host cm 10.11.100.8
+ip host cm2 10.11.100.9
+ip host p1 10.11.100.101
+ip host p2 10.11.100.102
+ip host sw 10.11.1.4
+ip host ed 10.11.11.1
+
+!ex1:
+@cucm:
+config t
+no access-list 100
+access-list 100 Permit tcp any host cm eq 80
+access-list 100 Permit tcp any host cm eq 443
+access-list 100 Permit tcp any host cm2 eq 22
+access-list 100 Permit tcp any host cm2 eq 53
+Int fa 0/0
+ip access-group 100 in
+do sh ip access-list 100
+
+!open the list
+Int fa 0/0
+no ip access-group 100 in
+
+
+config t
+no access-list 101
+access-list 101 Permit tcp any host cm eq 22
+access-list 101 Permit tcp any host cm eq 23
+access-list 101 Permit tcp any host cm eq 53
+access-list 101 Permit tcp any host cm2 eq 80
+access-list 101 Permit tcp any host cm2 eq 443
+end
+config t
+Int fa 0/0
+no ip access-group 101 in
+do sh ip access-list 101
+
+config t
+no access-list 102
+access-list 102 Permit tcp any host cm eq 23
+access-list 102 Permit tcp any host cm eq 80
+access-list 102 Permit tcp any host cm eq 53
+access-list 102 Permit tcp any host cm2 eq 22
+access-list 102 Permit tcp any host cm2 eq 443
+access-list 102 Permit tcp any host cm2 eq 23
+access-list 102 Permit tcp any host cm2 eq 2000
+end
+config t
+Int fa 0/0
+ip access-group 102 in
+do sh ip access-list 102
+
+
+
+
+
+

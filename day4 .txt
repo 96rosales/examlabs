@@ -1,0 +1,357 @@
+example 1: block the 3 classmates:
+!@edge:
+config t
+no access-list 1 !destroy lock
+access-list 1 deny 10.22.0.0 0.0.255.255
+access-list 1 deny 10.32.0.0 0.0.255.255
+access-list 1 deny 10.42.0.0 0.0.255.255
+access-list 1 perm any
+int gi 0/0/1 
+ip access-group 1 in !lock
+do sh ip access-list 1
+
+config t
+int gi 0/0/1
+no ip access-group 1 in !unlock
+do sh ip access-list 1
+
+new friends
+!@edge:
+config t
+no access-list 2 
+access-list 2 deny 10.21.0.0 0.0.255.255
+access-list 2 deny 10.32.0.0 0.0.255.255
+access-list 2 deny 10.42.0.0 0.0.255.255
+access-list 2 perm any
+int gi 0/0/1 
+ip access-group 2 in
+do sh ip access-list 2
+
+!unlock
+int gi 0/0/1 
+no ip access-group 2 in
+do sh ip access-list 2
+
+
+!@edge:
+config t
+no access-list 3 
+access-list 3 deny 10.21.0.0 0.0.255.255
+access-list 3 deny 10.32.0.0 0.0.255.255
+access-list 3 deny 10.42.0.0 0.0.255.255
+access-list 3 deny 10.22.0.0 0.0.255.255
+access-list 3 perm any
+int gi 0/0/1 
+ip access-group 3 in
+do sh ip access-list 3
+
+option3:
+config t
+no access-list 4
+access-list 4 Permit 10.12.0.0 0.0.255.255
+!access-list 4 deny ANY
+
+int gi 0/0/1
+no ip access-group 4 in
+do sh ip access-list 4
+
+config t
+no access-list 5
+access-list 5 Permit 10.22.0.0 0.0.255.255
+config t
+int gi 0/0/1
+ip access-group 5 in
+do sh ip access-list 5
+
+
+config t
+int fa 0/0
+ ip add 10.11.100.9 255.255.255.0 Secondary
+service finger
+service tcp-small-servers
+service udp-small-servers
+ip dns server
+ip http server
+ip http secure-server
+!Make Ping EASY
+ip host pc 10.11.1.10
+ip host cm 10.11.100.8
+ip host cm2 10.11.100.9
+ip host p1 10.11.100.101
+ip host p2 10.11.100.102
+ip host sw 10.11.1.4
+ip host ed 10.11.11.1
+
+!ex1:
+@cucm:
+config t
+no access-list 100
+access-list 100 Permit tcp any host cm eq 80
+access-list 100 Permit tcp any host cm eq 443
+access-list 100 Permit tcp any host cm2 eq 22
+access-list 100 Permit tcp any host cm2 eq 53
+Int fa 0/0
+ip access-group 100 in
+do sh ip access-list 100
+
+!open the list
+Int fa 0/0
+no ip access-group 100 in
+
+
+config t
+no access-list 101
+access-list 101 Permit tcp any host cm eq 22
+access-list 101 Permit tcp any host cm eq 23
+access-list 101 Permit tcp any host cm eq 53
+access-list 101 Permit tcp any host cm2 eq 80
+access-list 101 Permit tcp any host cm2 eq 443
+end
+config t
+Int fa 0/0
+no ip access-group 101 in
+do sh ip access-list 101
+
+config t
+no access-list 102
+access-list 102 Permit tcp any host cm eq 23
+access-list 102 Permit tcp any host cm eq 80
+access-list 102 Permit tcp any host cm eq 53
+access-list 102 Permit tcp any host cm2 eq 22
+access-list 102 Permit tcp any host cm2 eq 443
+access-list 102 Permit tcp any host cm2 eq 23
+access-list 102 Permit tcp any host cm2 eq 2000
+end
+config t
+Int fa 0/0
+ip access-group 102 in
+do sh ip access-list 102
+
+config t
+Int fa 0/0
+no ip access-group 102 in
+do sh ip access-list 102
+
+
+telnet cm 19 -> how to run protocol
+
+
+config t
+no access-list 104
+!allow ping Note: Under ICMP (Internet Control Messaging Protocol)
+access-list 104 Permit icmp any host cm
+!access list other tcp
+access-list 104 Permit tcp any host cm eq 23
+access-list 104 Permit tcp any host cm eq 22
+access-list 104 Permit tcp any host cm eq 443
+access-list 104 Permit tcp any host cm2 eq 13
+access-list 104 Permit tcp any host cm2 eq 19
+access-list 104 Permit tcp any host cm2 eq 79
+access-list 104 Permit tcp any host cm2 eq 53
+end
+
+config t
+Int fa 0/0
+ip access-group 104 in
+do sh ip access-list 104
+
+config t
+Int fa 0/0
+no ip access-group 104 in
+do sh ip access-list 104
+
+
+config t
+no access-list 105
+access-list 105 Permit tcp any host cm eq 53
+access-list 105 Permit tcp any host cm eq 22
+access-list 105 Permit tcp any host cm eq 80
+access-list 105 Permit tcp any host cm2 eq 23
+access-list 105 Permit tcp any host cm2 eq 22
+access-list 105 Permit tcp any host cm2 eq 19
+access-list 105 Permit tcp any host cm2 eq 13
+access-list 105 Permit icmp any host cm2
+end
+
+config t
+Int fa 0/0
+ip access-group 105 in
+do sh ip access-list 105
+
+config t
+Int fa 0/0
+no ip access-group 105 in
+do sh ip access-list 105
+
+
+
+config t
+int fa 0/0
+ ip add 10.m.100.9 255.255.255.0 Secondary
+service finger
+service tcp-small-servers
+service udp-small-servers
+ip dns server
+ip http server
+ip http secure-server
+!Make Ping EASY
+ip host pc 10.11.1.10
+ip host cm 10.11.100.8
+ip host cm2 10.11.100.9
+ip host p1 10.11.100.102
+ip host p2 10.11.100.103
+ip host c1 10.11.50.6
+ip host c2 10.11.50.8
+ip host sw 10.11.1.4
+ip host ed 10.11.11.1
+
+
+
+!ex6
+config t
+no access-list 106
+access-list 106 Permit tcp host p1 host cm eq 2000
+access-list 106 Permit tcp host p2 host cm eq 80
+access-list 106 Permit icmp host p2 host cm
+access-list 106 Permit icmp host c1 host cm
+access-list 106 Permit tcp host c2 host cm eq 80
+end
+
+config t
+Int fa 0/0
+ip access-group 106 in
+do sh ip access-list 106
+
+config t
+Int fa 0/0
+no ip access-group 106 in
+do sh ip access-list 106
+
+
+config t
+no access-list 107
+access-list 107 Permit tcp host p1 host cm eq 80
+access-list 107 Permit icmp host p1 host cm
+access-list 107 Permit tcp host p2 host cm eq 2000
+access-list 107 Permit tcp host c1 host cm eq 80
+access-list 107 Permit icmp host c2 host cm
+end
+
+config t
+Int fa 0/0
+ip access-group 107 in
+do sh ip access-list 107
+
+config t
+Int fa 0/0
+no ip access-group 107 in
+do sh ip access-list 107
+
+config t 
+no access-list 108
+access-list 108 Permit icmp host p1 host cm
+access-list 108 Permit tcp host p1 host cm eq 80
+access-list 108 Permit icmp host p2 host cm
+access-list 108 Permit tcp host p2 host cm eq 80
+access-list 108 Permit icmp host c1 host cm
+access-list 108 Permit tcp host c1 host cm eq 443
+access-list 108 Permit icmp host c2 host cm
+end
+config t
+Int fa 0/0
+ip access-group 108 in
+do sh ip access-list 108
+
+config t
+Int fa 0/0
+no ip access-group 108 in
+do sh ip access-list 108
+
+
+exam lab practice
+
+VPNJP:
+config t
+no logging console
+no ip domain-lookup
+int gi 1
+ip add 192.168.108.5 255.255.255.0
+no shut
+int gi 2
+ip add 172.16.100.5 255.255.255.0
+no shut
+int gi 3
+ip add 10.103.1.5 255.255.255.0
+no shut
+
+
+examlabNo.1: dualDHCPSERVER:
+@csr1000v:
+config t
+ip dhcp excluded-add 10.103.1.1 10.103.1.50
+ip dhcp excluded-add 172.16.100.1 172.16.100.80
+ip dhcp pool VM2
+ network 172.16.100.0 255.255.255.0
+ default-router 172.16.100.5
+ domain-name vmw.com
+ dns-server 1.1.1.1
+ip dhcp pool VM3
+ network 10.103.1.0 255.255.255.0
+ default-router 10.103.1.5
+ domain-name vm3.com
+ dns-server 1.1.1.1
+
+
+examlabNo.2: SSH Configuration
+Telnet is dangerous/hackable.
+config t
+ip domain-name rivanit.com
+username admin2 privilege 15 secret password
+crypto key generate rsa
+		512->1024
+ip ssh version 2
+
+
+examlabNo.3: Network time protocol: NTP. sychronizes time with a server
+sync with your headoffice: time.google.com
+@vpnJP:
+config t
+ip route 0.0.0.0 0.0.0.0 192.168.108.2
+ip domain-lookup
+ip name-server 8.8.8.8
+ntp server time.google.com
+do sh ntp association
+
+examlabNo.4: How to configure Network address translation:
+1. static mapping: 
+insideLocal     outsideLocal
+10.103.1.52 --> 192.168.3.88
+172.16.100.81 --> 192.168.108.69
+!
+10.103.1.51    --> default?
+172.16.100.82  --> default?
+@must edit
+config t
+access-list 8 permit 172.16.100.0 0.0.0.255
+access-list 8 permit 10.103.1.0 0.0.0.255
+Int Gi 2
+ ip nat Inside
+Int Gi 3
+ ip nat Inside
+Int Gi 1
+ ip nat Outside
+IP Nat inside source static 10.103.1.52 192.168.3.88
+IP Nat inside source static 172.16.100.81 192.168.108.69
+IP nat inside source list 8 int Gi 1 Overload
+end
+show ip nat translation
+
+
+
+
+
+
+
+
+
+

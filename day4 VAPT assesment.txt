@@ -1,0 +1,469 @@
+CMD Data
+Microsoft Windows [Version 10.0.20348.1668]
+(c) Microsoft Corporation. All rights reserved.
+
+C:\Users\Administrator>cd\
+
+C:\>nmap -sP 10.12.1.0/24
+Starting Nmap 7.92 ( https://nmap.org ) at 2023-09-21 11:25 Malay Peninsula Standard Time
+Nmap scan report for 10.12.1.4
+Host is up (0.0066s latency).
+Nmap scan report for 10.12.1.10
+Host is up (0.0010s latency).
+Nmap done: 256 IP addresses (2 hosts up) scanned in 4.41 seconds
+
+C:\>nmap -v 10.12.1.10
+Starting Nmap 7.92 ( https://nmap.org ) at 2023-09-21 11:29 Malay Peninsula Standard Time
+Initiating Ping Scan at 11:29
+Scanning 10.12.1.10 [4 ports]
+Completed Ping Scan at 11:29, 0.02s elapsed (1 total hosts)
+Initiating Parallel DNS resolution of 1 host. at 11:29
+Completed Parallel DNS resolution of 1 host. at 11:29, 0.00s elapsed
+Initiating SYN Stealth Scan at 11:29
+Scanning aeron.com (10.12.1.10) [1000 ports]
+Discovered open port 80/tcp on 10.12.1.10
+Discovered open port 25/tcp on 10.12.1.10
+Discovered open port 110/tcp on 10.12.1.10
+Discovered open port 143/tcp on 10.12.1.10
+Discovered open port 53/tcp on 10.12.1.10
+Discovered open port 445/tcp on 10.12.1.10
+Discovered open port 587/tcp on 10.12.1.10
+Discovered open port 135/tcp on 10.12.1.10
+Discovered open port 139/tcp on 10.12.1.10
+Discovered open port 21/tcp on 10.12.1.10
+Increasing send delay for 10.12.1.10 from 0 to 5 due to 34 out of 112 dropped probes since last increase.
+Increasing send delay for 10.12.1.10 from 5 to 10 due to 11 out of 27 dropped probes since last increase.
+Increasing send delay for 10.12.1.10 from 10 to 20 due to 11 out of 11 dropped probes since last increase.
+Discovered open port 912/tcp on 10.12.1.10
+Discovered open port 7070/tcp on 10.12.1.10
+Discovered open port 5405/tcp on 10.12.1.10
+Discovered open port 902/tcp on 10.12.1.10
+Discovered open port 3300/tcp on 10.12.1.10
+Completed SYN Stealth Scan at 11:29, 19.98s elapsed (1000 total ports)
+Nmap scan report for aeron.com (10.12.1.10)
+Host is up (0.0011s latency).
+Not shown: 985 closed tcp ports (reset)
+PORT     STATE SERVICE
+21/tcp   open  ftp
+25/tcp   open  smtp
+53/tcp   open  domain
+80/tcp   open  http
+110/tcp  open  pop3
+135/tcp  open  msrpc
+139/tcp  open  netbios-ssn
+143/tcp  open  imap
+445/tcp  open  microsoft-ds
+587/tcp  open  submission
+902/tcp  open  iss-realsecure
+912/tcp  open  apex-mesh
+3300/tcp open  ceph
+5405/tcp open  pcduo
+7070/tcp open  realserver
+
+Read data files from: C:\Program Files (x86)\Nmap
+Nmap done: 1 IP address (1 host up) scanned in 20.36 seconds
+           Raw packets sent: 1079 (47.452KB) | Rcvd: 1002 (40.116KB)
+
+CMD VOICE
+Microsoft Windows [Version 10.0.20348.1668]
+(c) Microsoft Corporation. All rights reserved.
+
+C:\Users\Administrator>cd\
+
+C:\>nmap -v 10.12.50.0/24
+Starting Nmap 7.92 ( https://nmap.org ) at 2023-09-21 11:26 Malay Peninsula Standard Time
+Initiating Ping Scan at 11:26
+Scanning 256 hosts [4 ports/host]
+Completed Ping Scan at 11:26, 4.02s elapsed (256 total hosts)
+Initiating Parallel DNS resolution of 3 hosts. at 11:26
+Completed Parallel DNS resolution of 3 hosts. at 11:26, 0.01s elapsed
+Nmap scan report for 10.12.50.0 [host down]
+Nmap scan report for 10.12.50.1 [host down]
+Nmap scan report for 10.12.50.2 [host down]
+Nmap scan report for 10.12.50.3 [host down]
+Nmap scan report for 10.12.50.5 [host down]
+Nmap scan report for 10.12.50.7 [host down]
+Nmap scan report for 10.12.50.9 [host down]
+Nmap scan report for 10.12.50.10 [host down]
+Nmap scan report for 10.12.50.11 [host down]
+Nmap scan report for 10.12.50.12 [host down]
+Nmap scan report for 10.12.50.13 [host down]
+Nmap scan report for 10.12.50.14 [host down]
+Nmap scan report for 10.12.50.15 [host down]
+Nmap scan report for 10.12.50.16 [host down]
+Nmap scan report for 10.12.50.17 [host down]
+Nmap scan report for 10.12.50.18 [host down]
+Nmap scan report for 10.12.50.19 [host down]
+Nmap scan report for 10.12.50.20 [host down]
+Nmap scan report for 10.12.50.21 [host down]
+Nmap scan report for 10.12.50.22 [host down]
+Nmap scan report for 10.12.50.23 [host down]
+Nmap scan report for 10.12.50.24 [host down]
+Nmap scan report for 10.12.50.25 [host down]
+Nmap scan report for 10.12.50.26 [host down]
+Nmap scan report for 10.12.50.27 [host down]
+Nmap scan report for 10.12.50.28 [host down]
+Nmap scan report for 10.12.50.29 [host down]
+Nmap scan report for 10.12.50.30 [host down]
+Nmap scan report for 10.12.50.31 [host down]
+Nmap scan report for 10.12.50.32 [host down]
+Nmap scan report for 10.12.50.33 [host down]
+Nmap scan report for 10.12.50.34 [host down]
+Nmap scan report for 10.12.50.35 [host down]
+Nmap scan report for 10.12.50.36 [host down]
+Nmap scan report for 10.12.50.37 [host down]
+Nmap scan report for 10.12.50.38 [host down]
+Nmap scan report for 10.12.50.39 [host down]
+Nmap scan report for 10.12.50.40 [host down]
+Nmap scan report for 10.12.50.41 [host down]
+Nmap scan report for 10.12.50.42 [host down]
+Nmap scan report for 10.12.50.43 [host down]
+Nmap scan report for 10.12.50.44 [host down]
+Nmap scan report for 10.12.50.45 [host down]
+Nmap scan report for 10.12.50.46 [host down]
+Nmap scan report for 10.12.50.47 [host down]
+Nmap scan report for 10.12.50.48 [host down]
+Nmap scan report for 10.12.50.49 [host down]
+Nmap scan report for 10.12.50.50 [host down]
+Nmap scan report for 10.12.50.51 [host down]
+Nmap scan report for 10.12.50.52 [host down]
+Nmap scan report for 10.12.50.53 [host down]
+Nmap scan report for 10.12.50.54 [host down]
+Nmap scan report for 10.12.50.55 [host down]
+Nmap scan report for 10.12.50.56 [host down]
+Nmap scan report for 10.12.50.57 [host down]
+Nmap scan report for 10.12.50.58 [host down]
+Nmap scan report for 10.12.50.59 [host down]
+Nmap scan report for 10.12.50.60 [host down]
+Nmap scan report for 10.12.50.61 [host down]
+Nmap scan report for 10.12.50.62 [host down]
+Nmap scan report for 10.12.50.63 [host down]
+Nmap scan report for 10.12.50.64 [host down]
+Nmap scan report for 10.12.50.65 [host down]
+Nmap scan report for 10.12.50.66 [host down]
+Nmap scan report for 10.12.50.67 [host down]
+Nmap scan report for 10.12.50.68 [host down]
+Nmap scan report for 10.12.50.69 [host down]
+Nmap scan report for 10.12.50.70 [host down]
+Nmap scan report for 10.12.50.71 [host down]
+Nmap scan report for 10.12.50.72 [host down]
+Nmap scan report for 10.12.50.73 [host down]
+Nmap scan report for 10.12.50.74 [host down]
+Nmap scan report for 10.12.50.75 [host down]
+Nmap scan report for 10.12.50.76 [host down]
+Nmap scan report for 10.12.50.77 [host down]
+Nmap scan report for 10.12.50.78 [host down]
+Nmap scan report for 10.12.50.79 [host down]
+Nmap scan report for 10.12.50.80 [host down]
+Nmap scan report for 10.12.50.81 [host down]
+Nmap scan report for 10.12.50.82 [host down]
+Nmap scan report for 10.12.50.83 [host down]
+Nmap scan report for 10.12.50.84 [host down]
+Nmap scan report for 10.12.50.85 [host down]
+Nmap scan report for 10.12.50.86 [host down]
+Nmap scan report for 10.12.50.87 [host down]
+Nmap scan report for 10.12.50.88 [host down]
+Nmap scan report for 10.12.50.89 [host down]
+Nmap scan report for 10.12.50.90 [host down]
+Nmap scan report for 10.12.50.91 [host down]
+Nmap scan report for 10.12.50.92 [host down]
+Nmap scan report for 10.12.50.93 [host down]
+Nmap scan report for 10.12.50.94 [host down]
+Nmap scan report for 10.12.50.95 [host down]
+Nmap scan report for 10.12.50.96 [host down]
+Nmap scan report for 10.12.50.97 [host down]
+Nmap scan report for 10.12.50.98 [host down]
+Nmap scan report for 10.12.50.99 [host down]
+Nmap scan report for 10.12.50.100 [host down]
+Nmap scan report for 10.12.50.101 [host down]
+Nmap scan report for 10.12.50.102 [host down]
+Nmap scan report for 10.12.50.103 [host down]
+Nmap scan report for 10.12.50.104 [host down]
+Nmap scan report for 10.12.50.105 [host down]
+Nmap scan report for 10.12.50.106 [host down]
+Nmap scan report for 10.12.50.107 [host down]
+Nmap scan report for 10.12.50.108 [host down]
+Nmap scan report for 10.12.50.109 [host down]
+Nmap scan report for 10.12.50.110 [host down]
+Nmap scan report for 10.12.50.111 [host down]
+Nmap scan report for 10.12.50.112 [host down]
+Nmap scan report for 10.12.50.113 [host down]
+Nmap scan report for 10.12.50.114 [host down]
+Nmap scan report for 10.12.50.115 [host down]
+Nmap scan report for 10.12.50.116 [host down]
+Nmap scan report for 10.12.50.117 [host down]
+Nmap scan report for 10.12.50.118 [host down]
+Nmap scan report for 10.12.50.119 [host down]
+Nmap scan report for 10.12.50.120 [host down]
+Nmap scan report for 10.12.50.121 [host down]
+Nmap scan report for 10.12.50.122 [host down]
+Nmap scan report for 10.12.50.123 [host down]
+Nmap scan report for 10.12.50.124 [host down]
+Nmap scan report for 10.12.50.125 [host down]
+Nmap scan report for 10.12.50.126 [host down]
+Nmap scan report for 10.12.50.127 [host down]
+Nmap scan report for 10.12.50.128 [host down]
+Nmap scan report for 10.12.50.129 [host down]
+Nmap scan report for 10.12.50.130 [host down]
+Nmap scan report for 10.12.50.131 [host down]
+Nmap scan report for 10.12.50.132 [host down]
+Nmap scan report for 10.12.50.133 [host down]
+Nmap scan report for 10.12.50.134 [host down]
+Nmap scan report for 10.12.50.135 [host down]
+Nmap scan report for 10.12.50.136 [host down]
+Nmap scan report for 10.12.50.137 [host down]
+Nmap scan report for 10.12.50.138 [host down]
+Nmap scan report for 10.12.50.139 [host down]
+Nmap scan report for 10.12.50.140 [host down]
+Nmap scan report for 10.12.50.141 [host down]
+Nmap scan report for 10.12.50.142 [host down]
+Nmap scan report for 10.12.50.143 [host down]
+Nmap scan report for 10.12.50.144 [host down]
+Nmap scan report for 10.12.50.145 [host down]
+Nmap scan report for 10.12.50.146 [host down]
+Nmap scan report for 10.12.50.147 [host down]
+Nmap scan report for 10.12.50.148 [host down]
+Nmap scan report for 10.12.50.149 [host down]
+Nmap scan report for 10.12.50.150 [host down]
+Nmap scan report for 10.12.50.151 [host down]
+Nmap scan report for 10.12.50.152 [host down]
+Nmap scan report for 10.12.50.153 [host down]
+Nmap scan report for 10.12.50.154 [host down]
+Nmap scan report for 10.12.50.155 [host down]
+Nmap scan report for 10.12.50.156 [host down]
+Nmap scan report for 10.12.50.157 [host down]
+Nmap scan report for 10.12.50.158 [host down]
+Nmap scan report for 10.12.50.159 [host down]
+Nmap scan report for 10.12.50.160 [host down]
+Nmap scan report for 10.12.50.161 [host down]
+Nmap scan report for 10.12.50.162 [host down]
+Nmap scan report for 10.12.50.163 [host down]
+Nmap scan report for 10.12.50.164 [host down]
+Nmap scan report for 10.12.50.165 [host down]
+Nmap scan report for 10.12.50.166 [host down]
+Nmap scan report for 10.12.50.167 [host down]
+Nmap scan report for 10.12.50.168 [host down]
+Nmap scan report for 10.12.50.169 [host down]
+Nmap scan report for 10.12.50.170 [host down]
+Nmap scan report for 10.12.50.171 [host down]
+Nmap scan report for 10.12.50.172 [host down]
+Nmap scan report for 10.12.50.173 [host down]
+Nmap scan report for 10.12.50.174 [host down]
+Nmap scan report for 10.12.50.175 [host down]
+Nmap scan report for 10.12.50.176 [host down]
+Nmap scan report for 10.12.50.177 [host down]
+Nmap scan report for 10.12.50.178 [host down]
+Nmap scan report for 10.12.50.179 [host down]
+Nmap scan report for 10.12.50.180 [host down]
+Nmap scan report for 10.12.50.181 [host down]
+Nmap scan report for 10.12.50.182 [host down]
+Nmap scan report for 10.12.50.183 [host down]
+Nmap scan report for 10.12.50.184 [host down]
+Nmap scan report for 10.12.50.185 [host down]
+Nmap scan report for 10.12.50.186 [host down]
+Nmap scan report for 10.12.50.187 [host down]
+Nmap scan report for 10.12.50.188 [host down]
+Nmap scan report for 10.12.50.189 [host down]
+Nmap scan report for 10.12.50.190 [host down]
+Nmap scan report for 10.12.50.191 [host down]
+Nmap scan report for 10.12.50.192 [host down]
+Nmap scan report for 10.12.50.193 [host down]
+Nmap scan report for 10.12.50.194 [host down]
+Nmap scan report for 10.12.50.195 [host down]
+Nmap scan report for 10.12.50.196 [host down]
+Nmap scan report for 10.12.50.197 [host down]
+Nmap scan report for 10.12.50.198 [host down]
+Nmap scan report for 10.12.50.199 [host down]
+Nmap scan report for 10.12.50.200 [host down]
+Nmap scan report for 10.12.50.201 [host down]
+Nmap scan report for 10.12.50.202 [host down]
+Nmap scan report for 10.12.50.203 [host down]
+Nmap scan report for 10.12.50.204 [host down]
+Nmap scan report for 10.12.50.205 [host down]
+Nmap scan report for 10.12.50.206 [host down]
+Nmap scan report for 10.12.50.207 [host down]
+Nmap scan report for 10.12.50.208 [host down]
+Nmap scan report for 10.12.50.209 [host down]
+Nmap scan report for 10.12.50.210 [host down]
+Nmap scan report for 10.12.50.211 [host down]
+Nmap scan report for 10.12.50.212 [host down]
+Nmap scan report for 10.12.50.213 [host down]
+Nmap scan report for 10.12.50.214 [host down]
+Nmap scan report for 10.12.50.215 [host down]
+Nmap scan report for 10.12.50.216 [host down]
+Nmap scan report for 10.12.50.217 [host down]
+Nmap scan report for 10.12.50.218 [host down]
+Nmap scan report for 10.12.50.219 [host down]
+Nmap scan report for 10.12.50.220 [host down]
+Nmap scan report for 10.12.50.221 [host down]
+Nmap scan report for 10.12.50.222 [host down]
+Nmap scan report for 10.12.50.223 [host down]
+Nmap scan report for 10.12.50.224 [host down]
+Nmap scan report for 10.12.50.225 [host down]
+Nmap scan report for 10.12.50.226 [host down]
+Nmap scan report for 10.12.50.227 [host down]
+Nmap scan report for 10.12.50.228 [host down]
+Nmap scan report for 10.12.50.229 [host down]
+Nmap scan report for 10.12.50.230 [host down]
+Nmap scan report for 10.12.50.231 [host down]
+Nmap scan report for 10.12.50.232 [host down]
+Nmap scan report for 10.12.50.233 [host down]
+Nmap scan report for 10.12.50.234 [host down]
+Nmap scan report for 10.12.50.235 [host down]
+Nmap scan report for 10.12.50.236 [host down]
+Nmap scan report for 10.12.50.237 [host down]
+Nmap scan report for 10.12.50.238 [host down]
+Nmap scan report for 10.12.50.239 [host down]
+Nmap scan report for 10.12.50.240 [host down]
+Nmap scan report for 10.12.50.241 [host down]
+Nmap scan report for 10.12.50.242 [host down]
+Nmap scan report for 10.12.50.243 [host down]
+Nmap scan report for 10.12.50.244 [host down]
+Nmap scan report for 10.12.50.245 [host down]
+Nmap scan report for 10.12.50.246 [host down]
+Nmap scan report for 10.12.50.247 [host down]
+Nmap scan report for 10.12.50.248 [host down]
+Nmap scan report for 10.12.50.249 [host down]
+Nmap scan report for 10.12.50.250 [host down]
+Nmap scan report for 10.12.50.251 [host down]
+Nmap scan report for 10.12.50.252 [host down]
+Nmap scan report for 10.12.50.253 [host down]
+Nmap scan report for 10.12.50.254 [host down]
+Nmap scan report for 10.12.50.255 [host down]
+Initiating SYN Stealth Scan at 11:26
+Scanning 3 hosts [1000 ports/host]
+Discovered open port 23/tcp on 10.12.50.4
+Discovered open port 443/tcp on 10.12.50.4
+Discovered open port 8080/tcp on 10.12.50.6
+Discovered open port 8080/tcp on 10.12.50.8
+Discovered open port 554/tcp on 10.12.50.6
+Discovered open port 554/tcp on 10.12.50.8
+Discovered open port 80/tcp on 10.12.50.8
+Discovered open port 80/tcp on 10.12.50.6
+Discovered open port 80/tcp on 10.12.50.4
+Completed SYN Stealth Scan against 10.12.50.6 in 1.70s (2 hosts left)
+Completed SYN Stealth Scan against 10.12.50.8 in 1.70s (1 host left)
+Increasing send delay for 10.12.50.4 from 0 to 5 due to 47 out of 156 dropped probes since last increase.
+Completed SYN Stealth Scan at 11:27, 7.99s elapsed (3000 total ports)
+Nmap scan report for 10.12.50.4
+Host is up (0.0025s latency).
+Not shown: 997 closed tcp ports (reset)
+PORT    STATE SERVICE
+23/tcp  open  telnet
+80/tcp  open  http
+443/tcp open  https
+
+Nmap scan report for 10.12.50.6
+Host is up (0.0020s latency).
+Not shown: 997 closed tcp ports (reset)
+PORT     STATE SERVICE
+80/tcp   open  http
+554/tcp  open  rtsp
+8080/tcp open  http-proxy
+
+Nmap scan report for 10.12.50.8
+Host is up (0.0020s latency).
+Not shown: 997 closed tcp ports (reset)
+PORT     STATE SERVICE
+80/tcp   open  http
+554/tcp  open  rtsp
+8080/tcp open  http-proxy
+
+Read data files from: C:\Program Files (x86)\Nmap
+Nmap done: 256 IP addresses (3 hosts up) scanned in 12.42 seconds
+           Raw packets sent: 5150 (214.360KB) | Rcvd: 3252 (175.724KB)
+
+C:\>nmap -sP 10.12.50.0/24
+Starting Nmap 7.92 ( https://nmap.org ) at 2023-09-21 11:28 Malay Peninsula Standard Time
+Nmap scan report for 10.12.50.4
+Host is up (0.0074s latency).
+Nmap scan report for 10.12.50.6
+Host is up (0.0010s latency).
+Nmap scan report for 10.12.50.8
+Host is up (0.0010s latency).
+Nmap done: 256 IP addresses (3 hosts up) scanned in 4.36 seconds
+
+C:\>nmap -v 10.12.50.8
+Starting Nmap 7.92 ( https://nmap.org ) at 2023-09-21 11:29 Malay Peninsula Standard Time
+Initiating Ping Scan at 11:29
+Scanning 10.12.50.8 [4 ports]
+Completed Ping Scan at 11:29, 0.02s elapsed (1 total hosts)
+Initiating Parallel DNS resolution of 1 host. at 11:29
+Completed Parallel DNS resolution of 1 host. at 11:29, 0.01s elapsed
+Initiating SYN Stealth Scan at 11:29
+Scanning 10.12.50.8 [1000 ports]
+Discovered open port 80/tcp on 10.12.50.8
+Discovered open port 554/tcp on 10.12.50.8
+Discovered open port 8080/tcp on 10.12.50.8
+Completed SYN Stealth Scan at 11:29, 3.59s elapsed (1000 total ports)
+Nmap scan report for 10.12.50.8
+Host is up (0.0035s latency).
+Not shown: 997 closed tcp ports (reset)
+PORT     STATE SERVICE
+80/tcp   open  http
+554/tcp  open  rtsp
+8080/tcp open  http-proxy
+
+Read data files from: C:\Program Files (x86)\Nmap
+Nmap done: 1 IP address (1 host up) scanned in 3.98 seconds
+           Raw packets sent: 1111 (48.860KB) | Rcvd: 1001 (40.040KB)
+
+CMD VOICE
+Microsoft Windows [Version 10.0.20348.1668]
+(c) Microsoft Corporation. All rights reserved.
+
+C:\Users\Administrator>cd\
+
+C:\>nmap -sP 10.12.100.0/24
+Starting Nmap 7.92 ( https://nmap.org ) at 2023-09-21 11:25 Malay Peninsula Standard Time
+Nmap scan report for 10.12.100.4
+Host is up (0.011s latency).
+Nmap scan report for 10.12.100.8
+Host is up (0.0010s latency).
+Nmap scan report for 10.12.100.102
+Host is up (0.0050s latency).
+Nmap scan report for 10.12.100.103
+Host is up (0.0079s latency).
+Nmap done: 256 IP addresses (4 hosts up) scanned in 4.19 seconds
+
+C:\>nmap -v 10.12.100.8
+Starting Nmap 7.92 ( https://nmap.org ) at 2023-09-21 11:30 Malay Peninsula Standard Time
+Initiating Ping Scan at 11:30
+Scanning 10.12.100.8 [4 ports]
+Completed Ping Scan at 11:30, 0.03s elapsed (1 total hosts)
+Initiating Parallel DNS resolution of 1 host. at 11:30
+Completed Parallel DNS resolution of 1 host. at 11:30, 0.01s elapsed
+Initiating SYN Stealth Scan at 11:30
+Scanning 10.12.100.8 [1000 ports]
+Discovered open port 1720/tcp on 10.12.100.8
+Discovered open port 23/tcp on 10.12.100.8
+Discovered open port 5060/tcp on 10.12.100.8
+Discovered open port 6002/tcp on 10.12.100.8
+Increasing send delay for 10.12.100.8 from 0 to 5 due to 41 out of 135 dropped probes since last increase.
+Increasing send delay for 10.12.100.8 from 5 to 10 due to 11 out of 11 dropped probes since last increase.
+Increasing send delay for 10.12.100.8 from 10 to 20 due to 11 out of 11 dropped probes since last increase.
+Discovered open port 9002/tcp on 10.12.100.8
+Discovered open port 5061/tcp on 10.12.100.8
+Discovered open port 2000/tcp on 10.12.100.8
+Discovered open port 2002/tcp on 10.12.100.8
+Discovered open port 4002/tcp on 10.12.100.8
+Completed SYN Stealth Scan at 11:30, 21.86s elapsed (1000 total ports)
+Nmap scan report for 10.12.100.8
+Host is up (0.0016s latency).
+Not shown: 991 closed tcp ports (reset)
+PORT     STATE SERVICE
+23/tcp   open  telnet
+1720/tcp open  h323q931
+2000/tcp open  cisco-sccp
+2002/tcp open  globe
+4002/tcp open  mlchat-proxy
+5060/tcp open  sip
+5061/tcp open  sip-tls
+6002/tcp open  X11:2
+9002/tcp open  dynamid
+
+Read data files from: C:\Program Files (x86)\Nmap
+Nmap done: 1 IP address (1 host up) scanned in 22.27 seconds
+           Raw packets sent: 1115 (49.036KB) | Rcvd: 1001 (40.064KB)
+
+C:\>
